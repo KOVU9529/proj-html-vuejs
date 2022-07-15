@@ -81,6 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 nav{
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,7 +97,7 @@ nav{
               font-size: 10px;
               position: absolute;
               top: -60%;
-              left: 66%;
+              left: 62%;
               padding: 2px 4px;
               border-radius: 5px;
           }
@@ -105,6 +106,9 @@ nav{
                a{
                 text-decoration: none;
                 color:#333333 ;
+                &:hover{
+                    color: #f3c035;
+                }
                 &.active{
                   border-bottom:3px solid #f3c035;
                 }
