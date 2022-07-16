@@ -5,21 +5,21 @@
         <div class="card-img" v-for="card in sectionThreeArray" :key="card.id">
         <div >
          <img :src="card.img" alt="">
-         <h1>{{card.title}}</h1>
+         <h2>{{card.title}}</h2>
          <span>{{card.sub}}</span>
          <hr>
          <ul>
          <li>
-            <i :class="card.iconOne"></i>
-            <a :href="card.link">{{card.textOne}}</a>
+           <i class="fa-solid fa-signal"></i>
+            <a href="#">{{card.textOne}}</a>
          </li>
          <li>
-            <i :class="card.iconTwo"></i>
-            <a :href="card.link">{{card.textTwo}}</a>
+            <i class="fa-solid fa-bars"></i>
+            <a href="#">{{card.textTwo}}</a>
          </li>
          <li>
-             <i :class="card.iconThree"></i>
-            <a :href="card.link">{{card.textThree}}</a>
+            <i class="fa-regular fa-clock"></i>
+            <a href="#">{{card.textThree}}</a>
          </li>
          </ul>
         </div>
@@ -48,7 +48,7 @@ export default {
     background-color:#edf2f5 ;
     text-align: center;
     .title{
-        padding: 20px;
+        padding: 40px;
         font-size: xx-large;
     }
     .container{
@@ -68,8 +68,15 @@ export default {
         border-radius: 20px;
     }
     .card-img{
+        span,
+        hr{ color: #aca5b1;}
+        hr{
+            width: 90%;
+            margin:20px auto;
+        }
         img{
             width: 100%;
+            margin-bottom: 20px;
         }
         width:calc(96% / 3);
         background-color: white;
@@ -80,7 +87,12 @@ export default {
             display: flex;
             justify-content: space-between;
             padding: 5px 10px;
-            
+            width: 90%;
+            margin: 0 auto;
+            i{
+                color: #f2ba60;
+                margin-right: 5px;
+            }
             a{
                 color: inherit;
                 text-decoration: none;
