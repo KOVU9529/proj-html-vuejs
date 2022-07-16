@@ -51,6 +51,12 @@ export default {
         padding: 20px 10px;
         margin-bottom: 15px;
         box-shadow:5px 5px rgba($color: #9c9693, $alpha: 0.1);
+        &:hover {
+            background-color: #f3c035;
+        }
+         &:hover i{
+             color: white;
+         }
         i{
             color: #f3c035;
             font-size: 50px;

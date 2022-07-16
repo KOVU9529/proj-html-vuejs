@@ -5,7 +5,7 @@
         <div class="card-img" v-for="card in sectionThreeArray" :key="card.id">
         <div >
          <img :src="card.img" alt="">
-         <h2>{{card.title}}</h2>
+         <h3>{{card.title}}</h3>
          <span>{{card.sub}}</span>
          <hr>
          <ul>
