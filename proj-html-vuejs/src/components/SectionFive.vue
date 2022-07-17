@@ -6,14 +6,12 @@
             <div>
                  <i :class="card.icon"></i> 
             </div>
-           
             <div>
                 <h3> {{card.title}}</h3>
             <p>
                 {{card.text}}
             </p>
             </div>
-            
           </div>
       </div>
   </div>
@@ -38,10 +36,11 @@ export default {
         padding: 20px;
      }
     .containerFive{
+        padding: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     text-align: left;
     .cardCourses{

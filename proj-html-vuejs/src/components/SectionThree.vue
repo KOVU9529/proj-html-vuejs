@@ -2,9 +2,16 @@
   <div class="sectionThree">
       <h2 class="title">NEW COURSES</h2>
     <div class="container">
+        <!--Imposto il ciclo v-for per stampare le card-->
         <div class="card-img" v-for="card in sectionThreeArray" :key="card.id">
         <div >
-         <img :src="card.img" alt="">
+            <div class="sectionOverThree">
+                 <img :src="card.img" alt="">
+                 <!--Assegno determinate classi se e solo se sono soddisfatti determinati valori-->
+                 <span v-if="(card.target === 'NEW')" :class="{'targetNew':card.target === 'NEW' }" >{{card.target}}</span>
+                 <span v-else :class="{'target':card.target === 'SPECIAL' }" >{{card.target}}</span>
+                 <div class="imgOver"><span class="priceOld">{{card.priceOld}}</span > <span class="priceNew">{{card.priceNew}}</span> </div>
+            </div>
          <h3>{{card.title}}</h3>
          <span>{{card.sub}}</span>
          <hr>
@@ -25,12 +32,7 @@
         </div>
     </div>
     <a class="button" href="#">LOAD MORE</a>
-
     </div>
-    
-   
-
-   
   </div>
 </template>
 
@@ -55,7 +57,7 @@ export default {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 2% 5%;
+    padding: 2% 12%;
     justify-content: space-between;
     .button{
         margin-top: 5% ;
@@ -68,20 +70,75 @@ export default {
         border-radius: 20px;
     }
     .card-img{
+        width:calc(96% / 3);
+        background-color: white;
+        text-align: center;
+        margin-top: 10px;
+        h3{
+            padding: 5px 20px;
+            &:hover{
+            color: #f3c035;
+        }
+
+
+        }
+        
         span,
         hr{ color: #aca5b1;}
         hr{
             width: 90%;
             margin:20px auto;
         }
-        img{
+        .sectionOverThree{
+            position: relative;
+            .target{
+                border-radius: 5px;
+                padding: 4px 2px;
+                font-size: 10px;
+                position: absolute;
+                z-index: 3;
+                top: 4px;
+                right: 10px;
+                color: white;
+                background-color: orange ;
+            }
+            .targetNew{
+                border-radius: 5px;
+                padding: 4px 2px;
+                font-size: 10px;
+                position: absolute;
+                z-index: 3;
+                top: 4px;
+                right: 10px;
+                color: white;
+                background-color: green ;
+            }
+            .imgOver{
+                padding: 25%;
+                background-color:rgba($color: #000000, $alpha: 0.5);
+                top: 0px;
+                position: absolute;
+                opacity: 0;
+                width: 100%;
+                height: 90%;
+                .priceOld{
+                    text-decoration: line-through;
+                    color: #aca5b1;
+                }
+                .priceNew{
+                    color: #f3c035;
+                    font-size: 20px;
+                }
+            }
+            img{
             width: 100%;
+            height: 220px;
             margin-bottom: 20px;
+        } 
+        .imgOver:hover{
+            opacity: 1;
         }
-        width:calc(96% / 3);
-        background-color: white;
-        text-align: center;
-        margin-top: 10px;
+        }
         ul{
             list-style-type: none;
             display: flex;
@@ -89,7 +146,9 @@ export default {
             padding: 5px 10px;
             width: 90%;
             margin: 0 auto;
-            i{
+            li{
+                padding-bottom: 20px ;
+                i{
                 color: #f2ba60;
                 margin-right: 5px;
             }
@@ -97,6 +156,9 @@ export default {
                 color: inherit;
                 text-decoration: none;
             }
+
+            }
+            
         }
     }
 }

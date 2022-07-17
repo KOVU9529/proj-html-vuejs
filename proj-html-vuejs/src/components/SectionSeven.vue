@@ -1,6 +1,6 @@
 <template>
   <div class="sevenSelection">
-      <h1>What Students Say</h1>
+      <h2>What Students Say</h2>
       <div>
           <div class="selection">
               <div @click="showPrevElement" class="prev"><i class="fa-solid fa-arrow-left"></i></div>
@@ -14,7 +14,7 @@
           <div >
               <h3>{{sectionSevenArray[currentActiveElement].title}}</h3>
               <i v-for="star,index in 5" :key="index" class="fa-solid fa-star"></i>
-              <div>
+              <div class="paragraph">
                   <p>{{sectionSevenArray[currentActiveElement].text}}</p>
               </div>
           </div>
@@ -43,7 +43,6 @@ export default {
                 }else{
                     this.currentActiveElement = this.sectionSevenArray.length - 1;
                 }
-
             },
             //Imposto la funzione per andare avanti
             showNextElement(){
@@ -53,13 +52,11 @@ export default {
                 }else{
                     this.currentActiveElement = 0;
                 }
-
             },
             sameElement(elementIndex){
                 this.currentActiveElement=elementIndex;
             },
     }
-
 }
 </script>
 
@@ -67,6 +64,10 @@ export default {
 .sevenSelection{
     padding: 5% 10%;
     text-align: center;
+    h2{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
     .selection{
     padding: 30px;
     display: flex;
@@ -89,9 +90,12 @@ export default {
     }
 }
 .fa-solid.fa-star{
-    color: gold;
+    padding: 15px 0;
+    color: #f3c035;
 }
-
+.paragraph{
+    padding: 0 200px;
+}
 }
 
 

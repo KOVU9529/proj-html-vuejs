@@ -8,6 +8,7 @@
     <SectionFive :sectionFiveArray="sectionFiveArray"/>
     <SectionSix />
     <SectionSeven :sectionSevenArray="sectionSevenArray"/>
+    <FooterEnd />
   </div>
 </template>
 
@@ -20,6 +21,8 @@ import SectionFour from './components/SectionFour.vue'
 import SectionFive from './components/SectionFive.vue'
 import SectionSix from './components/SectionSix.vue'
 import SectionSeven from './components/SectionSeven.vue'
+import FooterEnd from './components/FooterEnd.vue'
+
 
 import dayjs from 'dayjs'
 
@@ -37,7 +40,10 @@ export default {
           sub:'Eletronic',
           textOne:'Advanced',
           textTwo:'8 Lectures',
-          textThree:'6 Hours'
+          textThree:'6 Hours',
+          priceOld:'$ 59.99',
+          priceNew:'$ 49.99',
+          target:'SPECIAL'
         },
         {
           id:'2',
@@ -46,7 +52,10 @@ export default {
           sub:'Nvidia',
           textOne:'Advanced',
           textTwo:'8 Lectures',
-          textThree:'6 Hours'
+          textThree:'6 Hours',
+          priceOld:'$ 50.99',
+          priceNew:'$ 25.99',
+          target:'SPECIAL'
         },
         {
           id:'3',
@@ -55,7 +64,9 @@ export default {
           sub:'Fashion',
           textOne:'Advanced',
           textTwo:'6 Lectures',
-          textThree:'6 Hours'
+          textThree:'6 Hours',
+          priceOld:'$ 90.99',
+          priceNew:'$ 45.99'
         },
         {
           id:'4',
@@ -64,7 +75,10 @@ export default {
           sub:'Communication',
           textOne:'Intermediate',
           textTwo:'6 Lectures',
-          textThree:'6 Hours'
+          textThree:'6 Hours',
+          priceOld:'$ 70.99',
+          priceNew:'$ 30.99',
+          target:'NEW'
         },
         {
           id:'5',
@@ -74,8 +88,10 @@ export default {
           link:'#',
           textOne:'Intermediate',
           textTwo:'6 Lectures',
-          textThree:'6 Hours'
-
+          textThree:'6 Hours',
+          priceOld:'$ 20.99',
+          priceNew:'$ 9.99',
+         
         },
         {
           id:'6',
@@ -84,7 +100,10 @@ export default {
           sub:'Bicycling',
           textOne:'Beginner',
           textTwo:'6 Lectures',
-          textThree:' 6 Hours'
+          textThree:' 6 Hours',
+          priceOld:'$ 60.99',
+          priceNew:'$ 45.99',
+          target:'NEW'
         }
       ],
       sectionFiveArray:[
@@ -114,11 +133,11 @@ export default {
       sectionSevenArray:[
         {
           title:'Come as you are',
-          text:'MasterStudy used is an excellent workshop whether you come as a counselor, advisor, administrator, or faculty member. I am going home empowered. I am looking forward to attending the On Course MasterStudy and the MasterStudy National Conference next year and facilitating the use of this excellent retention/student success course at my college.Paints of the FutureThe response to your MasterStudy has been really overwhelming! Those who participated in the workshop are spreading the word here on campus and the “buzz” is on. The VP of Instruction wants you to come back! Her goal is to have more faculty trained. She also w'
+          text:'MasterStudy used is an excellent workshop whether you come as a counselor, advisor, administrator, or faculty member. I am going home empowered. I am looking forward to attending the On Course MasterStudy and the MasterStudy National Conference next year and facilitating the use of this excellent retention/student success course at my college.'
         },
         {
           title:'Paints of the Future',
-          text:'The response to your MasterStudy has been really overwhelming! Those who participated in the workshop are spreading the word here on campus and the “buzz” is on. The VP of Instruction wants you to come back! Her goal is to have more faculty trained. She also wants to attend a workshop herself. Our President told me Masterstudy needs to be the cornerstone of our success program.”Investing for Your FutureIt is no exaggeration to say this MasterStudy experience was transformative–both professionally and personally. This workshop will long remain a high point of my life. Thanks again…. I am feeling energized and eager to start teaching my class next week. I can’t wait to use all of my new teaching tools. I will absolutely recommend this workshop to other educators!'
+          text:'The response to your MasterStudy has been really overwhelming! Those who participated in the workshop are spreading the word here on campus and the “buzz” is on. The VP of Instruction wants you to come back! Her goal is to have more faculty trained. She also wants to attend a workshop herself. Our President told me Masterstudy needs to be the cornerstone of our success program.'
         },
         {
           title:'Investing of Your Future',
@@ -135,7 +154,8 @@ export default {
     SectionFour,
     SectionFive,
     SectionSix,
-    SectionSeven
+    SectionSeven,
+    FooterEnd
   }
 }
 </script>
