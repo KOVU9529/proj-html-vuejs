@@ -28,10 +28,9 @@
 </template>
 
 <script>
-
-
 export default {
     name:'SectionOne',
+     //Riporto il valore della props(padre-figlio)
     props:{
         time:Function
     }
@@ -40,7 +39,6 @@ export default {
 
 <style lang="scss" scoped>
 .section-one{
-    
     position: relative;
     background-image: url("../assets/images/slide-1.jpg");
     background-size: cover;

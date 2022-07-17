@@ -24,7 +24,6 @@
 <script>
 export default {
     name:'SectionSix'
-
 }
 </script>
 
@@ -44,8 +43,6 @@ export default {
                  padding: 0 5px;
             }
         }
-
     }
 }
-
 </style>

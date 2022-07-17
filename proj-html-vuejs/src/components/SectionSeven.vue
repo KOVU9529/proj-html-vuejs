@@ -1,36 +1,43 @@
 <template>
-  <div class="sevenSelection">
-      <h2>What Students Say</h2>
-      <div>
-          <div class="selection">
-              <div @click="showPrevElement" class="prev"><i class="fa-solid fa-arrow-left"></i></div>
-          <div>
-              <img @click="sameElement(0)" :class="{'active' : 0 === currentActiveElement}" src="../assets/images/1-100x100.jpg" alt="">
-              <img @click="sameElement(1)" :class="{'active' : 1 === currentActiveElement}" src="../assets/images/2-100x100.jpg" alt="">
-              <img @click="sameElement(2)" :class="{'active' : 2 === currentActiveElement}" src="../assets/images/4-100x100.jpg" alt="">
-          </div>
-          <div @click="showNextElement" class="next"><i class="fa-solid fa-arrow-right"></i></div>
-          </div>
-          <div >
-              <h3>{{sectionSevenArray[currentActiveElement].title}}</h3>
-              <i v-for="star,index in 5" :key="index" class="fa-solid fa-star"></i>
-              <div class="paragraph">
-                  <p>{{sectionSevenArray[currentActiveElement].text}}</p>
-              </div>
-          </div>
-      </div>
-
-  </div>
+<div class="sevenSelection">
+    <h2>What Students Say</h2>
+    <div>
+        <div class="selection">
+            <!--Imposto l'azione indietro al click-->
+            <div @click="showPrevElement" class="prev"><i class="fa-solid fa-arrow-left"></i></div>
+        <div>
+            <!--Imposto l'azione elemento correntemente attivo al click
+                più aggiunta classe active-->
+            <img @click="sameElement(0)" :class="{'active' : 0 === currentActiveElement}" src="../assets/images/1-100x100.jpg" alt="">
+            <img @click="sameElement(1)" :class="{'active' : 1 === currentActiveElement}" src="../assets/images/2-100x100.jpg" alt="">
+            <img @click="sameElement(2)" :class="{'active' : 2 === currentActiveElement}" src="../assets/images/4-100x100.jpg" alt="">
+        </div>
+        <!--Imposto l'azione avanti al click-->
+        <div @click="showNextElement" class="next"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div >
+            <!--Imposto l'argomentazione per visualizzare l'argomento correntemente attivo-->
+            <h3>{{sectionSevenArray[currentActiveElement].title}}</h3>
+            <!--Imposto il v-for-->
+            <i v-for="star,index in 5" :key="index" class="fa-solid fa-star"></i>
+            <div class="paragraph">
+                <p>{{sectionSevenArray[currentActiveElement].text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
 export default {
     name:'SectionSeven',
+    //Riporto il valore della props(padre-figlio)
     props:{
         sectionSevenArray:Array
     },
     data(){
         return{
+            //Imposto la variabile partendo da un valore
             currentActiveElement:0,
         }
     },
@@ -53,13 +60,13 @@ export default {
                     this.currentActiveElement = 0;
                 }
             },
+            //Imposto la funzione per indicare l'elemento correntemente attivo
             sameElement(elementIndex){
                 this.currentActiveElement=elementIndex;
             },
     }
 }
 </script>
-
 <style lang="scss" scoped>
 .sevenSelection{
     padding: 5% 10%;
@@ -97,8 +104,4 @@ export default {
     padding: 0 200px;
 }
 }
-
-
-
-
 </style>

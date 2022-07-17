@@ -88,21 +88,21 @@ nav{
     .headerList{
      display: flex;
       ul{
-          position: relative;
-          display: flex;
-          list-style-type: none;
+        position: relative;
+        display: flex;
+        list-style-type: none;
           span{
-              color: white;
-              background-color: #dc1246;
-              font-size: 10px;
-              position: absolute;
-              top: -60%;
-              left: 62%;
-              padding: 2px 4px;
-              border-radius: 5px;
-          }
-             li{
-                 padding: 0 10px;
+            color: white;
+            background-color: #dc1246;
+            font-size: 10px;
+            position: absolute;
+            top: -60%;
+            left: 62%;
+            padding: 2px 4px;
+            border-radius: 5px;
+            }
+            li{
+                padding: 0 10px;
                a{
                 text-decoration: none;
                 color:#333333 ;

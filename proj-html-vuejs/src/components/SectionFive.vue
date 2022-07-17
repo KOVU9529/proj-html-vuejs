@@ -2,9 +2,10 @@
   <div class="sectionFive">
       <h2>Why my Courses?</h2>
       <div class="containerFive">
+          <!--Imposto il ciclo v-for-->
           <div class="cardCourses" v-for="card,index in sectionFiveArray" :key="index">
             <div>
-                 <i :class="card.icon"></i> 
+                <i :class="card.icon"></i> 
             </div>
             <div>
                 <h3> {{card.title}}</h3>
@@ -20,6 +21,7 @@
 <script>
 export default {
     name:'SectionFive',
+    //Riporto il valore della props(padre-figlio)
     props:{
         sectionFiveArray:Array
     }
@@ -69,9 +71,6 @@ export default {
         }
     }
 }
-
 }
-
-
 </style>
 

@@ -18,7 +18,6 @@
 <script>
 export default {
     name:'SectionFour'
-
 }
 </script>
 
@@ -38,7 +37,6 @@ export default {
         padding-top: 15%;
         padding-left:  5%;
         padding-right:  5%;
-
         .titleYllow{
             color: #f3c035;
         }
@@ -57,14 +55,9 @@ export default {
                 transform: translate(-10px,0px);
                 transition: all 2s linear 1s;
             }
-        }
-        
+        }   
     }
-    
-
     }
-    
 }
-
 </style>
 

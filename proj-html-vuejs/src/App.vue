@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!--Importo i template-->
     <HeaderComponent />
     <SectionOne :time="time"/>
     <SectionTwo />
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+//Importo i componenti 
 import HeaderComponent from './components/HeaderComponent.vue'
 import SectionOne from './components/SectionOne.vue'
 import SectionTwo from './components/SectionTwo.vue'
@@ -23,15 +25,14 @@ import SectionSix from './components/SectionSix.vue'
 import SectionSeven from './components/SectionSeven.vue'
 import FooterEnd from './components/FooterEnd.vue'
 
-
 import dayjs from 'dayjs'
-
 
 export default {
   name: 'App',
   data(){
     return{
       time:dayjs().format('DD HH mm ss'),
+      //Sezione array da passare tramite props
       sectionThreeArray:[
         {
           id:'1',
@@ -146,6 +147,7 @@ export default {
       ]
     }
   },
+  //Sezione componenti
   components: {
     HeaderComponent,
     SectionOne,
