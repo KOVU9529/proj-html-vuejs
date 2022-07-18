@@ -3,19 +3,31 @@
     <div class="content-six">
         <div class="six">
             <i class="fa-solid fa-user-group"></i>
-            <span >Online Learner</span>
+            <div class="sectionNumb">
+                <div class="numb">3195</div>
+                <span >Online Learner</span>
+            </div>
         </div>
          <div class="six"> 
             <i class="fa-solid fa-film"></i>
-            <span>Viseo Courses</span>
+            <div class="sectionNumb">
+                <div class="numb">23</div>
+                <span>Video Courses</span>
+            </div>
         </div>
          <div class="six">
             <i class="fa-regular fa-image"></i>
-            <span>Sliders & Images</span>
+            <div class="sectionNumb">
+                <div class="numb">437</div>
+                <span>Sliders & Images</span>
+            </div>
         </div>
          <div class="six">
             <i class="fa-regular fa-thumbs-up"></i>
-            <span>Excellent Reviews</span>
+            <div class="sectionNumb">
+                <div class="numb">1440</div>
+                <span>Excellent Reviews</span>
+            </div>
         </div>
     </div>
 </div>
@@ -37,7 +49,16 @@ export default {
         padding: 250px;
         color: white;
         .six{
+            display: flex;
             padding: 0 10px;
+            .sectionNumb{
+                padding-left:10px;
+                .numb{
+                font-weight: bold;
+                font-size: 30px;
+                color: #f3c035;
+            }
+            }
             i{
                 font-size: 50px;
                  padding: 0 5px;
