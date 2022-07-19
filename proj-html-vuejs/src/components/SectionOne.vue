@@ -14,14 +14,13 @@
          </div>   
         </div>
         <div class="clock">
-            <div class="time">{{time}}</div>
+            <div class="time">{{this.time}}</div>
             <div >
                 <span class="name-clock">Days</span>
                 <span class="name-clock">Hours</span>
                 <span class="name-clock">Minute</span>
                 <span class="name-clock">Second</span>
             </div>
-
         </div>
     </div>
 </div>
@@ -33,7 +32,7 @@ export default {
      //Riporto il valore della props(padre-figlio)
     props:{
         time:Function
-    }
+    },
 }
 </script>
 
@@ -54,9 +53,7 @@ export default {
             span{
             color: #f3c035;
         }
-
         }
-        
     }    
     .back-color{
         display:flex;
@@ -80,11 +77,10 @@ export default {
             color: white;
         }
         .name-clock{
-            padding: 0 15px;
+            padding-left: 30px;
             font-weight: bold;
         }
         }
-        
         h2 span{
             color: white;
         }
@@ -108,10 +104,7 @@ export default {
             color: white;
             }
         }
-       
     }
 }
-
-
 </style>
 

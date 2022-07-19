@@ -10,7 +10,7 @@
                   <!--Imposto il ciclo v-for
                       Assegno la classe all'elemento attivo-->
                   <li v-for="link,index in links" :key="index">
-                      <a @click="active(index)" :href="link.a" :class="{'active' : index === currentActiveElement}">{{link.text}}</a>
+                      <a @click="active(index)" :href="link.a" :class="{'active' : index === currentActiveElement}">{{link.text}}</a>    
                   </li>
               </ul>
               <ul>
@@ -103,6 +103,7 @@ nav{
             }
             li{
                 padding: 0 10px;
+               
                a{
                 text-decoration: none;
                 color:#333333 ;

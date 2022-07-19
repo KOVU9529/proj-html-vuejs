@@ -31,6 +31,7 @@ export default {
   name: 'App',
   data(){
     return{
+      //Imposto la variabile time assengnandole il valore di dayjs
       time:dayjs().format('DD HH mm ss'),
       //Sezione array da passare tramite props
       sectionThreeArray:[
@@ -160,6 +161,7 @@ export default {
     FooterEnd
   }
 }
+
 </script>
 
 <style lang="scss">
